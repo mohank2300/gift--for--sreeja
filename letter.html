@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Letter - Sreeja</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="memories.html">Memories</a>
+    <a href="reasons.html">Why You</a>
+    <a href="letter.html">My Letter</a>
+</nav>
+
+<div id="hearts"></div>
+
+<div class="content">
+    <h1>My Hope to Sreeja</h1>
+
+    <div class="letter-box">
+        <p><strong>Dear Sreeja,</strong></p>
+
+        <p>
+            Thank you for standing by me during my toughest times and for always believing in me.
+            Your support, patience, and love mean more to me than words can ever express.
+
+        </p>
+
+        <p>
+            I’m grateful for you every day, Right now, I am struggling to find a job, but I promise I am trying my best.
+            Very soon, I will get a job, bring you roses, and take you out for a beautiful dinner at an Italian restaurant.
+
+        </p>
+
+        <p style="text-align:right; margin-top: 28px; font-style: italic;">
+            Forever yours,<br />
+            <strong>Bannu Nalluri</strong>
+        </p>
+    </div>
+</div>
+
+<script>
+    function makeHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2.5 + 4) + 's';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 6500);
+    }
+    setInterval(makeHeart, 420);
+</script>
+</body>
+</html>

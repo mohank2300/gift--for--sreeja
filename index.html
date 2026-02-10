@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sreeja - Valentine's Day</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="memories.html">Memories</a>
+    <a href="reasons.html">Why You</a>
+    <a href="letter.html">My Letter</a>
+</nav>
+
+<div id="hearts"></div>
+
+<div class="content">
+    <img class="photo" src="images/intro.jpg" alt="Us" style="max-width:350px; height:350px; margin: 0 auto 25px; display:block;">
+    <h1>Happy Valentine's Day</h1>
+    <h1>SREEJA</h1>
+    <p>“I’d choose you, today and always.”.</p>
+</div>
+
+<script>
+    function makeHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '💕';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2.5 + 4) + 's';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 7000);
+    }
+    setInterval(makeHeart, 650);
+</script>
+</body>
+</html>

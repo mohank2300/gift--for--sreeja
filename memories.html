@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Memories - Sreeja</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="memories.html">Memories</a>
+    <a href="reasons.html">Why You</a>
+    <a href="letter.html">My Letter</a>
+</nav>
+
+<div id="hearts"></div>
+
+<div class="content">
+    <h1>Our Memories</h1>
+    <p>Every moment with you is my favorite memory.</p>
+
+    <div class="grid">
+        <img class="photo" src="images/beach.jpg" alt="Memory 1">
+        <img class="photo" src="images/hike.jpg" alt="Memory 2">
+        <img class="photo" src="images/end.jpg" alt="Memory 3">
+        <img class="photo" src="images/atlanta.jpg" alt="Memory 4">
+        <img class="photo" src="images/first hike.jpg" alt="Memory 5">
+        <img class="photo" src="images/house.jpg" alt="Memory 6">
+
+    </div>
+</div>
+
+<script>
+    function makeHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2.5 + 4) + 's';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 6500);
+    }
+    setInterval(makeHeart, 550);
+</script>
+</body>
+</html>

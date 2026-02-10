@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why I Love You - Sreeja</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="memories.html">Memories</a>
+    <a href="reasons.html">Why You</a>
+    <a href="letter.html">My Letter</a>
+</nav>
+
+<div id="hearts"></div>
+
+<div class="content">
+    <h1>I Love Sreeja</h1>
+    <p>A small list of the countless reasons you matter to me.</p>
+
+    <div class="grid">
+        <div class="reason"> Love: Sreeja, your love is my favorite feeling.</div>
+        <div class="reason"> Care: Your care makes me feel safe.</div>
+        <div class="reason"> Support: You are always my support.</div>
+        <div class="reason"> Angry on me: Sreeja, you get upset because you love me.</div>
+        <div class="reason"> You believe in me completely.</div>
+        <div class="reason"> Your hugs fix everything.</div>
+        <div class="reason"> Dull on me: Even in silence, your love stays.</div>
+        <div class="reason"> Romance: Your romance melts my heart.</div>
+        <div class="reason"> Travel: With you, Sreeja, every journey feels magical.</div>
+        <div class="reason"> I love the future we’re building together.</div>
+    </div>
+</div>
+
+<script>
+    function makeHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.textContent = '💕';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2.5 + 3.5) + 's';
+      document.getElementById('hearts').appendChild(heart);
+      setTimeout(() => heart.remove(), 6500);
+    }
+    setInterval(makeHeart, 350);
+</script>
+</body>
+</html>
